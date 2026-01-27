@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小廚神 RPG：料理修行日誌</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>🍳 小廚神 RPG</h1>
+            <div id="status-bar">目前階級：<span id="player-rank">新手學徒</span></div>
+        </header>
+
+        <main id="game-window">
+            <div id="story-box">
+                <p id="story-text">歡迎進入廚藝修行的世界。你想先從哪一項基礎開始練習？</p>
+            </div>
+            <div id="choices">
+                <button onclick="startLesson('knife')">🔪 基礎刀法練習</button>
+                <button onclick="startLesson('heat')">🔥 火候掌控入門</button>
+                <button onclick="startLesson('seasoning')">🧂 核心調味邏輯</button>
+            </div>
+        </main>
+
+        <section id="notebook">
+            <h3>📖 已認領的廚藝專長</h3>
+            <div id="skill-display">
+                <p id="empty-msg">目前尚未認領任何技能...</p>
+            </div>
+        </section>
+        
+        <footer>
+            <button id="reset-btn" onclick="clearData()">重置所有進度</button>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
